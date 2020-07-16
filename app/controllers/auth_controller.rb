@@ -12,11 +12,11 @@ class AuthController < ApplicationController
         render json: { message: 'Invalid username or password' }, status: :unauthorized
       end
     end
-
+    
     def validate
       render json: { user: UserSerializer.new(current_user)}
     end
-   
+
     private
    
     def user_login_params
