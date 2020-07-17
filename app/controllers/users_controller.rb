@@ -7,11 +7,12 @@ class UsersController < ApplicationController
    
     def create
       @user = User.create(user_params)
+      # byebug
       if @user.valid?
         @token = encode_token( { user_id: @user.id } )
         render json: { user: UserSerializer.new(@user), jwt: @token }, status: :created
       else
-        render json: { error: 'failed to create user' }, status: :not_acceptable
+        render json: { error: @user.errors.full_messages, user: @user }, status: :not_acceptable
       end
     end
    
