@@ -2,7 +2,7 @@ class CreateItems < ActiveRecord::Migration[6.0]
   def change
     create_table :items do |t|
       t.string :name
-      t.string :group
+      t.integer :category_id
       t.string :description
       t.integer :points, default: 100
       t.string :image
