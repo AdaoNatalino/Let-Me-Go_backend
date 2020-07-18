@@ -17,8 +17,8 @@ ActiveRecord::Schema.define(version: 2020_07_18_102914) do
 
   create_table "categories", force: :cascade do |t|
     t.string "title"
-    t.string "image"
-    t.string "width", default: "0.3333"
+    t.string "url"
+    t.string "width", default: "33%"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

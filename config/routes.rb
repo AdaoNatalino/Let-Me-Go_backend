@@ -3,8 +3,10 @@ Rails.application.routes.draw do
 
   resources :users, only: [:create]
   resources :items
+  # resources :categories
 
-  get '/category/:category_name', to: 'items#category'
+  get '/categories', to: 'categories#index'
+  get '/categories/:category_name', to: 'items#category'
 
   post '/login', to: 'auth#login'
   # get '/profile', to: 'users#profile'
