@@ -17,9 +17,9 @@ ActiveRecord::Schema.define(version: 2020_07_15_154456) do
 
   create_table "items", force: :cascade do |t|
     t.string "name"
-    t.string "type"
+    t.string "group"
     t.string "description"
-    t.integer "points"
+    t.integer "points", default: 100
     t.string "image"
     t.string "condition"
     t.integer "user_id"
@@ -29,16 +29,7 @@ ActiveRecord::Schema.define(version: 2020_07_15_154456) do
 
   create_table "trades", force: :cascade do |t|
     t.date "date"
-    t.string "status"
-    t.integer "item1_id"
-    t.integer "item2_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "transactions", force: :cascade do |t|
-    t.date "date"
-    t.string "status"
+    t.string "status", default: "Pending"
     t.integer "item1_id"
     t.integer "item2_id"
     t.datetime "created_at", precision: 6, null: false
@@ -53,7 +44,7 @@ ActiveRecord::Schema.define(version: 2020_07_15_154456) do
     t.string "email"
     t.string "avatar"
     t.string "bio"
-    t.string "stars"
+    t.integer "stars", default: 0
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

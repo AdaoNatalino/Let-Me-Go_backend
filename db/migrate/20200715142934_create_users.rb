@@ -8,7 +8,7 @@ class CreateUsers < ActiveRecord::Migration[6.0]
       t.string :email
       t.string :avatar
       t.string :bio
-      t.string :stars
+      t.integer :stars, default: 0
 
       t.timestamps
     end
