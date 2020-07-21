@@ -11,7 +11,6 @@ class User < ApplicationRecord
     validates :username, uniqueness: { case_sensitive: false }
     validates_format_of :email,:with => /\A[^@\s]+@([^@\s]+\.)+[^@\s]+\z/
 
-
     def trades
         self.items.map {|i| i.trades }
     end
