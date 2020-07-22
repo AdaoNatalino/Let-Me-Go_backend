@@ -9,6 +9,7 @@ class TradesController < ApplicationController
 
     def create
         @trade = Trade.create(trade_params)
+        # @trade.date = Date.today
         # byebug
         if @trade.valid?
           render json: { trade: @trade }, status: :created
