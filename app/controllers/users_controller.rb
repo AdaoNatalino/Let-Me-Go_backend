@@ -17,11 +17,7 @@ class UsersController < ApplicationController
 
     def update
       @user = current_user
-      # if params[:user][:password] && params[:user][:password].size == 0
-      #   params[:user][:password] = nil
-      # end
       @user.update(user_params)
-      # byebug
       if @user.valid?
         @token = encode_token( { user_id: @user.id } )
         render json: { user: UserSerializer.new(@user), jwt: @token }, status: :created
