@@ -12,6 +12,6 @@ class User < ApplicationRecord
     validates_format_of :email,:with => /\A[^@\s]+@([^@\s]+\.)+[^@\s]+\z/
 
     def trades
-        self.items.map {|i| i.trades }
+        self.items.map {|i| i.trades }.flatten
     end
 end

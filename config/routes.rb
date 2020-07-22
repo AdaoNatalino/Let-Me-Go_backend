@@ -3,9 +3,11 @@ Rails.application.routes.draw do
 
   resources :users, only: [:create, :update, :destroy]
   resources :items
+  
+  get '/trades/:id', to: 'trades#myTrades'
+
   resources :trades, only: [:create, :update]
 
-  # resources :categories
 
   get '/categories', to: 'categories#index'
   get '/categories/:category_name', to: 'items#category'
