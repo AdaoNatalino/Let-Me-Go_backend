@@ -11,7 +11,11 @@ class Category < ApplicationRecord
 
     def available_for_trade
 
-        trades_not_approved = self.with_trades.select{ |item| item.trades.select{ |trade| trade.status != "Approved"} }
+        trades_not_approved = self.with_trades.select{ |item| item.trades.all? {|t| t.status != "Approved" } }
+            # item.trades.select{ |trade| 
+            #     trade.status != "Approved"
+            # } 
+        
         without_trades = self.no_trades
 
         available = [trades_not_approved, without_trades].flatten

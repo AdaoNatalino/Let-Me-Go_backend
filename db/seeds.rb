@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-User.create(
+User.create([
     {
         name: "Adao Natalino",
         username: "adao",
@@ -15,8 +15,17 @@ User.create(
         email: "sansonov@gmail.com",
         avatar: "http://github.com/AdaoNatalino.png",
         bio: "Software Engineer Student",
+    },
+    {
+        name: "Larissa Diz",
+        username: "larissa",
+        password: "123456",
+        city: "London",
+        email: "larissa_diz@hotmail.com",
+        avatar: "",
+        bio: "Psychologist ",
     }
-)
+])
 
 Category.create([
     {
@@ -73,7 +82,7 @@ Item.create([
         description: "Just bought this laptop and I just can't get used to it!",
         image: "https://cdn.pocket-lint.com/r/s/970x/assets/images/152137-laptops-review-apple-macbook-pro-2020-review-image1-pbzm4ejvvs-jpg.webp",
         condition: "new",
-        user_id: 1
+        user_id: 2
     },
     {
         name: "Nokia", 
@@ -89,6 +98,6 @@ Item.create([
         description: "I don't need this AC because I'm moving to Iceland",
         image: "https://mobilityscooterhirebenidorm.com/wp-content/uploads/2018/09/Portable-Aircon-units-Hire-Benidorm.jpg",
         condition: "new",
-        user_id: 1
+        user_id: 2
     }
 ])

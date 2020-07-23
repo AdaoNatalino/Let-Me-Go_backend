@@ -17,9 +17,11 @@ class TradesController < ApplicationController
 
     def approve_request
       @trade = Trade.find(params[:id])
-      @trade.status: "Approved"
-      @trade.swap_owners
-      byebug
+      # byebug
+      @trade.update(status: "Approved")
+
+      render json: { trade: @trade }
+      # @trade.swap_owners
       # @trade.save
     end
 
