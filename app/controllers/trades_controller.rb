@@ -21,13 +21,11 @@ class TradesController < ApplicationController
       @trade.update(status: "Approved")
 
       render json: { trade: @trade }
-      # @trade.swap_owners
-      # @trade.save
+     
     end
 
     def create
       @trade = Trade.create(trade_params)
-      # @trade.date = Date.today
       # byebug
       if @trade.valid?
         render json: { trade: @trade }, status: :created
@@ -39,6 +37,6 @@ class TradesController < ApplicationController
       private
 
       def trade_params
-        params.require(:trade).permit(:item1_id, :item2_id)
+        params.require(:trade).permit(:item1_id, :item2_id, :requested_by)
       end
 end

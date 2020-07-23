@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(version: 2020_07_18_102914) do
   end
 
   create_table "trades", force: :cascade do |t|
-    t.date "date"
+    t.integer "requested_by"
     t.string "status", default: "Pending"
     t.integer "item1_id"
     t.integer "item2_id"
