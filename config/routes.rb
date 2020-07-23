@@ -5,8 +5,9 @@ Rails.application.routes.draw do
   resources :items
   
   get '/trades/:id', to: 'trades#myTrades'
+  patch '/trades/:id', to: 'trades#reject'
 
-  resources :trades, only: [:create, :update]
+  resources :trades, only: [:create]
 
 
   get '/categories', to: 'categories#index'
