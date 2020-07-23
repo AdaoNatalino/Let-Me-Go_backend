@@ -15,6 +15,11 @@ class TradesController < ApplicationController
       render json: { trade: @trade }
     end
 
+    def approve_request
+      @trade = Trade..find(params[:id])
+      @trade.update(status: "Approved")
+    end
+
     def create
       @trade = Trade.create(trade_params)
       # @trade.date = Date.today

@@ -14,4 +14,6 @@ class Trade < ApplicationRecord
     def user2
         self.item2.user
     end
+
+   
 end

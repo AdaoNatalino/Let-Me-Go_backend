@@ -18,7 +18,7 @@ class ItemsController < ApplicationController
 
     def category
         category = Category.find_by(title: params[:category_name])
-        @items = category.items
+        @items = category.available_for_trade
         render json: @items, each_serializer: ItemSerializer
 
         # items = Item.all.select{|i| i.category === params[:category_name]}

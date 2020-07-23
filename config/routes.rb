@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   get '/trades/:id', to: 'trades#myTrades'
   patch '/trades/:id', to: 'trades#reject'
 
+  patch '/approve/:id', to: 'trades#approve_request'
+
   resources :trades, only: [:create]
 
 
@@ -14,6 +16,5 @@ Rails.application.routes.draw do
   get '/categories/:category_name', to: 'items#category'
 
   post '/login', to: 'auth#login'
-  # get '/profile', to: 'users#profile'
   get '/validate', to: 'auth#validate'
 end
