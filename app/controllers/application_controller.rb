@@ -7,17 +7,14 @@ class ApplicationController < ActionController::API
     end
    
     def auth_header
-      # { Authorization: 'Bearer <token>' }
       request.headers['Authorization']
     end
    
     def decoded_token
       if auth_header
         token = auth_header.split(' ')[1]
-        # header: { 'Authorization': 'Bearer <token>' }
         begin
           JWT.decode(token, ENV['JWT_SECRET'], true, algorithm: 'HS256')
-          # byebug
         rescue JWT::DecodeError
           nil
         end
