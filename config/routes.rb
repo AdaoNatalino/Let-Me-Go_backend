@@ -2,7 +2,9 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
   resources :users, only: [:create, :update, :destroy]
-  resources :items
+  resources :items, only: [:create]
+  
+  get "myItems/:id", to: "items#myItems"
   
   get '/trades/:id', to: 'trades#myTrades'
   patch '/trades/:id', to: 'trades#reject'

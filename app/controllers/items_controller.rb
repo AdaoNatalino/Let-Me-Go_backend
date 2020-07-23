@@ -6,9 +6,14 @@ class ItemsController < ApplicationController
         render json: @items, each_serializer: ItemSerializer
     end
 
+    def myItems
+      @user = User.find(params[:id])
+      @items = @user.available_for_trade
+      render json: @items, each_serializer: ItemSerializer
+    end
+
     def create
         @item = Item.create(item_params)
-        # byebug
         if @item.valid?
           render json: { item: ItemSerializer.new(@item) }, status: :created
         else
@@ -20,9 +25,6 @@ class ItemsController < ApplicationController
         category = Category.find_by(title: params[:category_name])
         @items = category.available_for_trade
         render json: @items, each_serializer: ItemSerializer
-
-        # items = Item.all.select{|i| i.category === params[:category_name]}
-        # render json: items
     end
 
     private

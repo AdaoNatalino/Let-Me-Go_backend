@@ -2,14 +2,12 @@ class TradesController < ApplicationController
 
     def myTrades
       @user = User.find(params[:id])
-      # byebug
       @trades = @user.trades
       render json: @trades, each_serializer: TradeSerializer
     end
 
     def reject
       @trade = Trade.find(params[:id])
-      # byebug
       @trade.update(status: "Rejected")
     
       render json: { trade: @trade }
@@ -17,7 +15,6 @@ class TradesController < ApplicationController
 
     def approve_request
       @trade = Trade.find(params[:id])
-      # byebug
       @trade.update(status: "Approved")
 
       render json: { trade: @trade }
@@ -26,7 +23,6 @@ class TradesController < ApplicationController
 
     def create
       @trade = Trade.create(trade_params)
-      # byebug
       if @trade.valid?
         render json: { trade: @trade }, status: :created
       else
