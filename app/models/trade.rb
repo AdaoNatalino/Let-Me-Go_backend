@@ -15,5 +15,10 @@ class Trade < ApplicationRecord
         self.item2.user
     end
 
+    def swap_owners
+        first_user = self.user1 
+        self.user1 = self.user2
+        self.user2 = first_user
+    end
    
 end
