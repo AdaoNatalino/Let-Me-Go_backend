@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   resources :users, only: [:create, :update, :destroy]
   resources :items, only: [:create]
+  get '/items/:id', to: 'items#edit'
+
   
   get "myItems/:id", to: "items#myItems"
   

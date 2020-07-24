@@ -6,6 +6,22 @@ class ItemsController < ApplicationController
         render json: @items, each_serializer: ItemSerializer
     end
 
+    def edit
+      @item = Item.find(params[:id])
+      render json: @item, serializer: ItemSerializer
+    end
+
+    def update
+      @item = Item.find(params[:id])
+      byebug
+      # @item.update(item_params)
+      # if @item.valid?
+      #   render json: { item: ItemSerializer.new(@item) }, status: :created
+      # else
+      #   render json: { error: @item.errors.full_messages }, status: :not_acceptable
+      # end
+    end
+
     def myItems
       @user = User.find(params[:id])
       @items = @user.available_for_trade
