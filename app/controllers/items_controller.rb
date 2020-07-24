@@ -2,8 +2,8 @@ class ItemsController < ApplicationController
     # skip_before_action :authorized, only: [:index]
 
     def index
-        @items = Item.all
-        render json: @items, each_serializer: ItemSerializer
+      @items = Item.all
+      render json: @items, each_serializer: ItemSerializer
     end
 
     def edit
@@ -28,18 +28,18 @@ class ItemsController < ApplicationController
     end
 
     def create
-        @item = Item.create(item_params)
-        if @item.valid?
-          render json: { item: ItemSerializer.new(@item) }, status: :created
-        else
-          render json: { error: @item.errors.full_messages }, status: :not_acceptable
-        end
+      @item = Item.create(item_params)
+      if @item.valid?
+        render json: { item: ItemSerializer.new(@item) }, status: :created
+      else
+        render json: { error: @item.errors.full_messages }, status: :not_acceptable
+      end
     end
 
     def category
-        category = Category.find_by(title: params[:category_name])
-        @items = category.available_for_trade
-        render json: @items, each_serializer: ItemSerializer
+      category = Category.find_by(title: params[:category_name])
+      @items = category.available_for_trade
+      render json: @items, each_serializer: ItemSerializer
     end
 
     def destroy
