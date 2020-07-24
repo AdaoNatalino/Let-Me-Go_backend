@@ -42,6 +42,12 @@ class ItemsController < ApplicationController
         render json: @items, each_serializer: ItemSerializer
     end
 
+    def destroy
+      @item = Item.find(params[:id])
+      @item.destroy
+      render json: { item: "Item Deleted!" }, status: :accepted
+    end
+
     private
    
     def item_params
