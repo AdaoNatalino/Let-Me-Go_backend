@@ -13,13 +13,12 @@ class ItemsController < ApplicationController
 
     def update
       @item = Item.find(params[:id])
-      byebug
-      # @item.update(item_params)
-      # if @item.valid?
-      #   render json: { item: ItemSerializer.new(@item) }, status: :created
-      # else
-      #   render json: { error: @item.errors.full_messages }, status: :not_acceptable
-      # end
+      @item.update(item_params)
+      if @item.valid?
+        render json: { item: ItemSerializer.new(@item) }, status: :created
+      else
+        render json: { error: @item.errors.full_messages }, status: :not_acceptable
+      end
     end
 
     def myItems
