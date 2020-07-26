@@ -16,7 +16,7 @@ User.create([
         city: "London",
         email: "larissa_diz@hotmail.com",
         avatar: "",
-        bio: "Psychologist ",
+        bio: "Psychologist",
     }
 ])
 

@@ -23,10 +23,10 @@ class TradesController < ApplicationController
 
     def create
       @trade = Trade.create(trade_params)
-      if @trade.valid?
-
+      if @trade.valid?      
+        
         TradeMailer.with(trade: @trade).new_trade_email.deliver_later
-      
+
         render json: { trade: @trade }, status: :created
       else
         render json: { error: @trade.errors.full_messages }, status: :not_acceptable

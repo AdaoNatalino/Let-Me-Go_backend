@@ -1,28 +1,18 @@
 <!DOCTYPE html>
-
- <html class="no-js">   
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-    </head>
-    <body>
-        <p>You got a new trade request!</p>
-        <p>
-        Trade details<br>
-        --------------------------
-        </p>
-        <p>User 1: <%= @trade.user1 %></p>
-        <p>User 2: <%= @trade.user2 %></p>
-        <p>Item 1: <%= @trade.item1 %></p>
-        <p>Item 2: <%= @trade.item2 %></p>
-        <p>
-        Message:<br>
-        ----------
-        </p>
-        <p><%= @trade.status %></p>
-    </body>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Thank you for using Let me Go!</h1>
+    <br><br>
+    <h5>You received a new trade request!.</h5>
+    <p>User1: <%= @trade.user1.name %></p>
+    <p>User2: <%= @trade.user2.name %></p>
+    <p>Item1: <%= @trade.item1.name %></p>
+    <p>Item2: <%= @trade.item2.name %></p>
+    <br><br>
+    <br><br>
+    <span>Status: <%= @trade.status %></span>
+  </body>
 </html>
