@@ -20,5 +20,10 @@ class Trade < ApplicationRecord
         self.user1 = self.user2
         self.user2 = first_user
     end
+
+    def made_by
+        u = User.find(self.requested_by)
+        self.users.select{ | user | user == u }
+    end
    
 end

@@ -4,15 +4,16 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <h1>Thank you for using Let me Go!</h1>
+    <h2>Thank you for using Let me Go!</h2>
     <br><br>
-    <h5>You received a new trade request!.</h5>
+    <h5>You received a new trade request from <%= @trade.made_by.name %>!</h5>
     <p>User1: <%= @trade.user1.name %></p>
     <p>User2: <%= @trade.user2.name %></p>
     <p>Item1: <%= @trade.item1.name %></p>
     <p>Item2: <%= @trade.item2.name %></p>
     <br><br>
-    <br><br>
     <span>Status: <%= @trade.status %></span>
+    <p>Please go to your account to accept/reject this request.</p>
+
   </body>
 </html>
