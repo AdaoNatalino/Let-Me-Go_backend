@@ -14,7 +14,7 @@ User.create([
         city: "London",
         email: "sansonov@gmail.com",
         avatar: "http://github.com/AdaoNatalino.png",
-        bio: "Software Engineer Student",
+        bio: "Software Engineer",
     },
     {
         name: "Larissa Diz",
@@ -23,7 +23,43 @@ User.create([
         city: "London",
         email: "larissa_diz@hotmail.com",
         avatar: "",
-        bio: "Psychologist ",
+        bio: "Psychologist",
+    },
+    {
+        name: "Charlie Payne",
+        username: "charlie",
+        password: "123456",
+        city: "London",
+        email: "ccharliepayne1993@hotmail.co.uk",
+        avatar: "https://avatars2.githubusercontent.com/u/37950260?v=4",
+        bio: "Software Engineer",
+    },
+    {
+        name: "Gbenga Ojo-Aromokudu",
+        username: "gbenga",
+        password: "123456",
+        city: "London",
+        email: "ggojoaromokudu@gmail.com",
+        avatar: "https://avatars3.githubusercontent.com/u/57733903?v=4",
+        bio: "Software Engineer",
+    },
+    {
+        name: "Daniel Kaczmarczyk",
+        username: "dan",
+        password: "123456",
+        city: "London",
+        email: "ddanielkaczmarczyk2@gmail.com",
+        avatar: "https://avatars2.githubusercontent.com/u/20131636?v=4",
+        bio: "Software Engineer",
+    },
+    {
+        name: "Douglas Marin Barco",
+        username: "douglas",
+        password: "123456",
+        city: "London",
+        email: "ddouglas@dobuilding.co.uk",
+        avatar: "https://avatars2.githubusercontent.com/u/20131636?v=4",
+        bio: "Software Engineer",
     }
 ])
 
@@ -99,5 +135,47 @@ Item.create([
         image: "https://mobilityscooterhirebenidorm.com/wp-content/uploads/2018/09/Portable-Aircon-units-Hire-Benidorm.jpg",
         condition: "new",
         user_id: 2
+    },
+    {
+        name: "Super NES", 
+        category_id: 5,
+        description: "I didn't wanna to get rid of this, but I need to",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/SNES-Mod1-Console-Set.jpg/250px-SNES-Mod1-Console-Set.jpg",
+        condition: "old",
+        user_id: 5
+    },
+    {
+        name: "Super Barbecue Grill", 
+        category_id: 6,
+        description: "I got this as a gift from a friend, but I am vegan...",
+        image: "https://www.appliancesdirect.co.uk/Images/IQBQCAMERICAN_5_Supersize.jpg?v=81",
+        condition: "new",
+        user_id: 3
+    },
+    {
+        name: "Multi Gym Home", 
+        category_id: 9,
+        description: "I have this at home, but I started learn how to code, so I don't have life anymore.",
+        image: "https://images-na.ssl-images-amazon.com/images/I/71X3sbEt55L._AC_SL1500_.jpg",
+        condition: "new",
+        user_id: 4
+    },
+    {
+        name: "Halloween Costume", 
+        category_id: 7,
+        description: "This is my favorite halloween costume, but I started scaring kids too much.",
+        image: "https://cdn.shopify.com/s/files/1/0012/9282/8781/products/DOCTORKIDS2.JPG?v=1538483468",
+        condition: "new",
+        user_id: 6
+    },
+    {
+        name: "Corolla Cross", 
+        category_id: 1,
+        description: "I just wanna get an sport convertible one",
+        image: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/20200709-01-02-1594303120.jpg?crop=0.859xw:0.694xh;0.141xw,0.267xh&resize=1200:*",
+        condition: "new",
+        user_id: 5
     }
+
 ])
+
