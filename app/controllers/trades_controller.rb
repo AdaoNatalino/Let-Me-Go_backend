@@ -31,11 +31,11 @@ class TradesController < ApplicationController
       else
         render json: { error: @trade.errors.full_messages }, status: :not_acceptable
       end
-      end
+    end
 
-      private
+    private
 
-      def trade_params
-        params.require(:trade).permit(:item1_id, :item2_id, :requested_by)
-      end
+    def trade_params
+      params.require(:trade).permit(:item1_id, :item2_id, :requested_by)
+    end
 end
