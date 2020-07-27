@@ -23,7 +23,12 @@ class Trade < ApplicationRecord
 
     def made_by
         u = User.find(self.requested_by)
-        self.users.select{ | user | user == u }
+        self.users.select{ | user | user == u }[0]
+    end
+
+    def mail_to
+        u = self.made_by
+        self.users.find{|us| us != u}.email
     end
    
 end

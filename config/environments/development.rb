@@ -9,15 +9,18 @@ config.action_mailer.delivery_method = :smtp
 host = 'http://localhost:3001/' 
 config.action_mailer.default_url_options = { host: host, protocol: 'http' }
 
-
 config.action_mailer.smtp_settings = {
   :address              => "smtp.gmail.com",
   :port                 => 587,
-  :user_name            => "sansonov",
-  :password             => "lmfkjexrmjmfslmk",
+  :user_name            => "letmegotrades@gmail.com",
+  :password             => "icgvjjcatpfdqcam",
   :authentication       => "plain",
   :enable_starttls_auto => true
 }
+
+
+
+
 
   config.cache_classes = false
 

@@ -2,7 +2,9 @@ class TradeMailer < ApplicationMailer
 
     def new_trade_email
         @trade = params[:trade]
+        # byebug
 
-        mail(to: "adaojosen@hotmail.com", subject: "You got a new trade request!")
+        mail(to: @trade.mail_to, subject: "Let Me Go! - New trade request!")
     end
+
 end

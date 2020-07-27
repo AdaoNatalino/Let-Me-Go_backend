@@ -25,7 +25,7 @@ class TradesController < ApplicationController
       @trade = Trade.create(trade_params)
       if @trade.valid?      
         
-        TradeMailer.with(trade: @trade).new_trade_email.deliver_later
+        TradeMailer.with(trade: @trade).new_trade_email.deliver_now
 
         render json: { trade: @trade }, status: :created
       else

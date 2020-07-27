@@ -7,7 +7,7 @@ User.create([
         city: "London",
         email: "sansonov@gmail.com",
         avatar: "http://github.com/AdaoNatalino.png",
-        bio: "Software Engineer Student",
+        bio: "Software Engineer",
     },
     {
         name: "Larissa Diz",
@@ -17,8 +17,45 @@ User.create([
         email: "larissa_diz@hotmail.com",
         avatar: "",
         bio: "Psychologist",
+    },
+    {
+        name: "Charlie Payne",
+        username: "charlie",
+        password: "123456",
+        city: "London",
+        email: "charliepayne1993@hotmail.co.uk1",
+        avatar: "https://avatars2.githubusercontent.com/u/37950260?v=4",
+        bio: "Software Engineer",
+    },
+    {
+        name: "Douglas Barco",
+        username: "douglas",
+        password: "123456",
+        city: "London",
+        email: "douglas@dobuilding.co.uk1",
+        avatar: "",
+        bio: "Software Engineer",
+    },
+    {
+        name: "Daniel Kaczmarczyk",
+        username: "dan",
+        password: "123456",
+        city: "London",
+        email: "danielkaczmarczyk2@gmail.com1",
+        avatar: "https://avatars2.githubusercontent.com/u/20131636?v=4",
+        bio: "Software Engineer",
+    },
+    {
+        name: "Gbenga Ojo-Aromokudu",
+        username: "gbenga",
+        password: "123456",
+        city: "London",
+        email: "gojoaromokudu@gmail.com1",
+        avatar: "https://avatars3.githubusercontent.com/u/57733903?v=4",
+        bio: "Software Engineer",
     }
 ])
+
 
 Category.create([
     {
@@ -92,5 +129,93 @@ Item.create([
         image: "https://mobilityscooterhirebenidorm.com/wp-content/uploads/2018/09/Portable-Aircon-units-Hire-Benidorm.jpg",
         condition: "new",
         user_id: 2
+    },
+    {
+        name: "Halloween Costume", 
+        category_id: 7,
+        description: "I like this costume, but I am scaring the kids too much!",
+        image: "https://cdn.shopify.com/s/files/1/0012/9282/8781/products/DOCTORKIDS2.JPG?v=1538483468",
+        condition: "used",
+        user_id: 4
+    },
+    {
+        name: "Home Gym", 
+        category_id: 8,
+        description: "I started a bootcamp, so I don't have time to work out anymore",
+        image: "https://images-na.ssl-images-amazon.com/images/I/71X3sbEt55L._AC_SL1500_.jpg",
+        condition: "new",
+        user_id: 4
+    },
+    {
+        name: "Super Grill", 
+        category_id: 6,
+        description: "I got it from a friend as a gift, but I am vegan...",
+        image: "https://www.appliancesdirect.co.uk/Images/IQBQCAMERICAN_5_Supersize.jpg?v=81",
+        condition: "new",
+        user_id: 3
+    },
+    {
+        name: "Super NES", 
+        category_id: 5,
+        description: "It was my favorite for a long time...",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/SNES-Mod1-Console-Set.jpg/250px-SNES-Mod1-Console-Set.jpg",
+        condition: "used",
+        user_id: 5
+    },
+    {
+        name: "Travel Bag", 
+        category_id: 6,
+        description: "Places will start to open again, you should be prepared to travel!",
+        image: "https://powerkiteshop.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/d/u/duotone-travel-bag-l.jpg",
+        condition: "new",
+        user_id: 4
+    },
+    {
+        name: "Victorian Wooden Piano", 
+        category_id: 6,
+        description: "I just don't play anymore",
+        image: "https://www.renderhub.com/glenfx/old-victorian-wooden-upright-piano-low-poly/old-victorian-wooden-upright-piano-low-poly-01.jpg",
+        condition: "used",
+        user_id: 5
+    },
+    {
+        name: "Second Screen", 
+        category_id: 2,
+        description: "Ideal as a second screen for coding.",
+        image: "https://www.techadvisor.co.uk/cmsdata/features/3674679/best_monitors_to_use_as_a_second_screen.jpg",
+        condition: "used",
+        user_id: 6
+    },
+    {
+        name: "Really comfortable Inflatable Chair", 
+        category_id: 4,
+        description: "Ideal for traveling, parks or just to chill at home.",
+        image: "https://images-na.ssl-images-amazon.com/images/I/311j1uOTpbL._AC_SY450_.jpg",
+        condition: "used",
+        user_id: 6
+    },
+    {
+        name: "Super Vacuum Turbo", 
+        category_id: 3,
+        description: "Keep your house clean very easily",
+        image: "https://cdn.bmstores.co.uk/images/hpcProductImage/imgSource/356438-goodmans-turbomax-vac-2.jpg",
+        condition: "new",
+        user_id: 2
+    },
+    {
+        name: "Professional Dunlop Indoor Tennis Table", 
+        category_id: 9,
+        description: "Have fun with friends. Really good way to work out too.",
+        image: "https://www.bishopsport.co.uk/user/products/large/TT1430-BE.jpg",
+        condition: "used",
+        user_id: 1
+    },
+    {
+        name: "Fishing Rod Kit", 
+        category_id: 9,
+        description: "Great to spend a day relaxing and fishing",
+        image: "https://fishdeal.co.uk/media/d0797577f8b60205.jpg",
+        condition: "used",
+        user_id: 4
     }
 ])
