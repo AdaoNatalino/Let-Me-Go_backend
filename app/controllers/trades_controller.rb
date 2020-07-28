@@ -13,7 +13,6 @@ class TradesController < ApplicationController
       render json: { trade: @trade }
     end
 
-    #When the trade is approved!
     def approve_request
       @trade = Trade.find(params[:id])
       @trade.update(status: "Approved")

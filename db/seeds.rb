@@ -217,5 +217,29 @@ Item.create([
         image: "https://fishdeal.co.uk/media/d0797577f8b60205.jpg",
         condition: "used",
         user_id: 4
+    },
+    {
+        name: "Super Beetle VW 1969", 
+        category_id: 1,
+        description: "It was passed from generations in my family, but I need to get over it now.",
+        image: "https://i.pinimg.com/originals/ca/19/b2/ca19b22c33321e3fb2ccaf98689d2f80.jpg",
+        condition: "Collection Edition",
+        user_id: 4
+    },
+    {
+        name: "Fiat 147 1982", 
+        category_id: 1,
+        description: "Was a three-door hatchback compact car produced by Fiat in the Brazilian state of Minas Gerais from autumn 1976 until 1987",
+        image: "https://s30.wheelsage.org/format/picture/picture-preview-large/fiat/147/autowp.ru_fiat_147_rallye_3.jpg",
+        condition: "Collection Edition",
+        user_id: 4
+    },
+    {
+        name: "Gol VW 94", 
+        category_id: 1,
+        description: "Gol was the best-selling car in Brazil for 27 consecutive years, from 1987 to 2014",
+        image: "https://live.staticflickr.com/789/40645361095_a59b394db2_b.jpg",
+        condition: "Collection Edition",
+        user_id: 4
     }
 ])
