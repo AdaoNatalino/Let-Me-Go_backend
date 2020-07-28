@@ -5,7 +5,7 @@ class ApplicationController < ActionController::API
     JWT.encode(payload, ENV['JWT_SECRET'])
   end
 
-  def token_with_used_id_and_time(user)
+  def token_with_user_id_and_time(user)
     issued_date = Time.now.to_i
     encode_token( { user_id: user.id, issued_date: issued_date } )
   end

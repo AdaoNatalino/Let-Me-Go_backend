@@ -6,7 +6,7 @@ class AuthController < ApplicationController
     if @user && @user.authenticate(user_login_params[:password])
 
       # @token = encode_token( { user_id: @user.id } )
-      @token = token_with_used_id_and_time(@user)
+      @token = token_with_user_id_and_time(@user)
 
       render json: { user: UserSerializer.new(@user), jwt: @token }, status: :accepted
     else

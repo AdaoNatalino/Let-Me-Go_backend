@@ -6,7 +6,7 @@ class UsersController < ApplicationController
     if @user.valid?
 
       # @token = encode_token( { user_id: @user.id } )
-      @token = token_with_used_id_and_time(@user)
+      @token = token_with_user_id_and_time(@user)
 
       render json: { user: UserSerializer.new(@user), jwt: @token }, status: :created
     else
@@ -19,7 +19,7 @@ class UsersController < ApplicationController
     @user.update(user_params)
     if @user.valid?
       # @token = encode_token( { user_id: @user.id } )
-      
+
       @token = token_with_used_id_and_time(@user)
       render json: { user: UserSerializer.new(@user), jwt: @token }, status: :created
     else
