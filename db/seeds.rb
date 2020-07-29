@@ -1,6 +1,6 @@
-# Item.destroy_all
-# User.destroy_all
-# Category.destroy_all
+Item.destroy_all
+User.destroy_all
+Category.destroy_all
 
 
 User.create([
