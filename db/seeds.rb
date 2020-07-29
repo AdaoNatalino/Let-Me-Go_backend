@@ -241,5 +241,101 @@ Item.create([
         image: "https://live.staticflickr.com/789/40645361095_a59b394db2_b.jpg",
         condition: "Collection Edition",
         user_id: 4
+    },
+    {
+        name: "Sony TV 14'", 
+        category_id: 2,
+        description: "Black and White",
+        image: "https://loveincorporated.blob.core.windows.net/contentimages/gallery/9ef99ebd-ea53-4216-862e-bfcf86c7ebaa-60s_TV.jpg",
+        condition: "",
+        user_id: 5
+    },
+    {
+        name: "Multek Pro Camera", 
+        category_id: 2,
+        description: "Ideal for travellers. Great moments for eternity ",
+        image: "https://www.multek.com/sites/default/files/styles/news_teaser_style_/public/2017-10/Landing1_0.jpg?itok=_IV-ozIg",
+        condition: "Used",
+        user_id: 6
+    },
+    {
+        name: "Wall - Projector", 
+        category_id: 2,
+        description: "Epson EX3260 SVGA 3LCD Projector",
+        image: "https://i.pcmag.com/imagery/reviews/05zbkrYHRcLokM4U8DeuS1G-9..v_1569478919.jpg",
+        condition: "Used",
+        user_id: 3
+    },
+    {
+        name: "Home Theater", 
+        category_id: 2,
+        description: "LG Home Theater System LHB645N",
+        image: "https://www.lg.com/uk/images/home-cinema-systems/md05835810/gallery/LHB645N_large1.jpg",
+        condition: "New",
+        user_id: 1
+    },
+    {
+        name: "Toolset Kit", 
+        category_id: 6,
+        description: "",
+        image: "https://www.wheellockingnuts.co.uk/167-large_default/toolset-s96.jpg",
+        condition: "New",
+        user_id: 4
+    },
+    {
+        name: "Skipping Rope", 
+        category_id: 8,
+        description: " There are multiple subsets of skipping/jump rope, including single freestyle, single speed.",
+        image: "https://images-na.ssl-images-amazon.com/images/I/71EgVOWPXpL._AC_SX466_.jpg",
+        condition: "Used",
+        user_id: 6
+    },
+    {
+        name: "Roller Form", 
+        category_id: 8,
+        description: "Used for massage and fitness! ",
+        image: "https://cdn.anatomytrains.com/wp-content/uploads/2015/04/trigger-point-performance-the-grid-revolutionary-foam-roller_1.jpg",
+        condition: "New",
+        user_id: 2
+    },
+    {
+        name: "Bike Cross", 
+        category_id: 8,
+        description: "CRX500 Cross Bike",
+        image: "https://media.4rgos.it/i/Argos/6071026_R_Z003A?w=750&h=440&qlt=70",
+        condition: "Used",
+        user_id: 2
+    },
+    {
+        name: "Personal Scale", 
+        category_id: 8,
+        description: "PS240 Personal Non Slip Bathroom Scale",
+        image: "https://media.4rgos.it/i/Argos/1679595_R_Z001A?w=750&h=440&qlt=70",
+        condition: "",
+        user_id: 5
+    },
+    {
+        name: "Pool Table", 
+        category_id: 5,
+        description: "It comes with extensive range of cabinet colours to choose",
+        image: "https://www.madfun.co.uk/media/catalog/product/cache/4/image/9df78eab33525d08d6e5fb8d27136e95/2/4/2450_supreme-winnera-freepl.jpg",
+        condition: "Used",
+        user_id: 2
+    },
+    {
+        name: "Plastic Swimming pool", 
+        category_id: 6,
+        description: "I am moving to another house and I don't have enough space",
+        image: "https://lh3.googleusercontent.com/proxy/KdSqdB_ZFrSb1MFL3zaZjUnI3hB88QB40nLnqPPjQxdE2lSLUpwWOIJQQ7xi2S1T7NJ5ZpVCSM3q6IrvDdLs4eFXyGi3XOjYm0bXfXmEenT0o3qZ6ds",
+        condition: "used",
+        user_id: 5
+    },
+    {
+        name: "Personal Scale", 
+        category_id: 8,
+        description: "PS240 Personal Non Slip Bathroom Scale",
+        image: "https://media.4rgos.it/i/Argos/1679595_R_Z001A?w=750&h=440&qlt=70",
+        condition: "",
+        user_id: 5
     }
 ])

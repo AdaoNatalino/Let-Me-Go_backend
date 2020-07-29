@@ -10,7 +10,7 @@ class ApplicationController < ActionController::API
     encode_token( { user_id: user.id, issued_date: issued_date } )
   end
 
-  def difference_less_than_thirty_minutes(issued_date)
+  def token_issued_less_than_third_minutes_ago?(issued_date)
     difference = (Time.now.to_i - issued_date) < 1800 ? true : false
   end
 
@@ -24,7 +24,7 @@ class ApplicationController < ActionController::API
       begin
         decoded_token = JWT.decode(token, ENV['JWT_SECRET'], true, algorithm: 'HS256')
         issued_date = decoded_token[0]['issued_date']
-        if difference_less_than_thirty_minutes(issued_date)
+        if token_issued_less_than_third_minutes_ago?(issued_date)
           decoded_token
         end
         # byebug

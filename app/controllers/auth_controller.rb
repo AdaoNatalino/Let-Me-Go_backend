@@ -15,7 +15,8 @@ class AuthController < ApplicationController
   end
   
   def validate
-    render json: { user: UserSerializer.new(current_user) }
+    @token = token_with_user_id_and_time(@user)
+    render json: { user: UserSerializer.new(current_user), jwt: @token }
   end
 
   private

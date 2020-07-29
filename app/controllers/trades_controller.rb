@@ -39,3 +39,5 @@ class TradesController < ApplicationController
       params.require(:trade).permit(:item1_id, :item2_id, :requested_by)
     end
 end
+
+

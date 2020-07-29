@@ -7,3 +7,4 @@ class TradeMailer < ApplicationMailer
     end
 
 end
+
