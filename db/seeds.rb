@@ -3,7 +3,7 @@ User.create([
     {
         name: "Adao Natalino",
         username: "adao",
-        password: "123456",
+        password: ENV['personal'],
         city: "London",
         email: "sansonov@gmail.com",
         avatar: "http://github.com/AdaoNatalino.png",
@@ -12,7 +12,7 @@ User.create([
     {
         name: "Larissa Diz",
         username: "larissa",
-        password: "123456",
+        password: ENV['personal'],
         city: "London",
         email: "larissa_diz@hotmail.com",
         avatar: "",
@@ -21,7 +21,7 @@ User.create([
     {
         name: "Charlie Payne",
         username: "charlie",
-        password: "123456",
+        password: ENV['personal'],
         city: "London",
         email: "charliepayne1993@hotmail.co.uk1",
         avatar: "https://avatars2.githubusercontent.com/u/37950260?v=4",
@@ -30,7 +30,7 @@ User.create([
     {
         name: "Douglas Barco",
         username: "douglas",
-        password: "123456",
+        password: ENV['personal'],
         city: "London",
         email: "douglas@dobuilding.co.uk1",
         avatar: "",
@@ -39,7 +39,7 @@ User.create([
     {
         name: "Daniel Kaczmarczyk",
         username: "dan",
-        password: "123456",
+        password: ENV['personal'],
         city: "London",
         email: "danielkaczmarczyk2@gmail.com1",
         avatar: "https://avatars2.githubusercontent.com/u/20131636?v=4",
@@ -48,7 +48,7 @@ User.create([
     {
         name: "Gbenga Ojo-Aromokudu",
         username: "gbenga",
-        password: "123456",
+        password: ENV['personal'],
         city: "London",
         email: "gojoaromokudu@gmail.com1",
         avatar: "https://avatars3.githubusercontent.com/u/57733903?v=4",
@@ -291,7 +291,7 @@ Item.create([
         user_id: 6
     },
     {
-        name: "Roller Form", 
+        name: "Roller Foam", 
         category_id: 8,
         description: "Used for massage and fitness! ",
         image: "https://cdn.anatomytrains.com/wp-content/uploads/2015/04/trigger-point-performance-the-grid-revolutionary-foam-roller_1.jpg",
@@ -331,11 +331,43 @@ Item.create([
         user_id: 5
     },
     {
-        name: "Personal Scale", 
-        category_id: 8,
-        description: "PS240 Personal Non Slip Bathroom Scale",
-        image: "https://media.4rgos.it/i/Argos/1679595_R_Z001A?w=750&h=440&qlt=70",
-        condition: "",
-        user_id: 5
+        name: "Game chair", 
+        category_id: 4,
+        description: "Ideal to play games!",
+        image: "https://cdn.game.net/image/upload/dpr_auto,f_auto,q_auto/v1/game_img/ml2/7/5/5/4/755424_gen_a.png",
+        condition: "Used",
+        user_id: 1
+    },
+    {
+        name: "Chess Board", 
+        category_id: 9,
+        description: "Great to develop logical skills and relax",
+        image: "https://media.4rgos.it/i/Argos/3904567_R_Z001A_UC706239?w=750&h=440&qlt=70",
+        condition: "used",
+        user_id: 1
+    },
+    {
+        name: "GM SC2 account", 
+        category_id: 5,
+        description: "Grand Master Star Craft 2 account with everything unblocked, collection edition",
+        image: "https://i.imgur.com/Pv4LmFk.jpg",
+        condition: "used",
+        user_id: 1
+    },
+    {
+        name: "PS4", 
+        category_id: 5,
+        description: "Just wanna switch the game platform",
+        image: "https://cdn.pocket-lint.com/r/s/970x/assets/images/138763-games-review-sony-ps4-pro-review-image1-gcolf3ytme.jpg",
+        condition: "used",
+        user_id: 1
+    },
+    {
+        name: "Headphone", 
+        category_id: 2,
+        description: "Venue Noise Canceling Wireless",
+        image: "https://cdn11.bigcommerce.com/s-fa8ae9fe8j/products/26/images/1397/fe5679daad7a540a0ecffd38abf2bfa7e097758c15cb12544f83596e7925e919__08531.1542676447.500.750.jpg?c=2",
+        condition: "New",
+        user_id: 1
     }
 ])
