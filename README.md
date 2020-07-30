@@ -1,23 +1,25 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
+Ruby on Rails as API for a final project Software Engineer course at Flatiron School.
+Authentication with JWT timed tokens;
+Ruby Action Mailer;
+Serializers;
 
 * Ruby version
+'rails', '~> 6.0.3', '>= 6.0.3.2'
 
 * System dependencies
+Check Gemfile
 
 * Configuration
+Bundle the Gemfile, the db:setup with your owns ENV['variables']
 
 * Database creation
-
+Postegres SQL
 * Database initialization
 
 * How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
+Run the migrations
 
 * Deployment instructions
 
