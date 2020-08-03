@@ -27,9 +27,6 @@ class ApplicationController < ActionController::API
         if token_issued_less_than_third_minutes_ago?(issued_date)
           decoded_token
         end
-        # byebug
-
-        # JWT.decode(token, ENV['JWT_SECRET'], true, algorithm: 'HS256')
       rescue JWT::DecodeError
         nil
       end

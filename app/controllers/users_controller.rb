@@ -4,8 +4,6 @@ class UsersController < ApplicationController
   def create
     @user = User.create(user_params)
     if @user.valid?
-
-      # @token = encode_token( { user_id: @user.id } )
       @token = token_with_user_id_and_time(@user)
 
       render json: { user: UserSerializer.new(@user), jwt: @token }, status: :created
@@ -18,7 +16,6 @@ class UsersController < ApplicationController
     @user = current_user
     @user.update(user_params)
     if @user.valid?
-      # @token = encode_token( { user_id: @user.id } )
 
       @token = token_with_user_id_and_time(@user)
       render json: { user: UserSerializer.new(@user), jwt: @token }, status: :created
