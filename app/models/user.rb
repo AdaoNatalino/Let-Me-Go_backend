@@ -3,7 +3,6 @@ class User < ApplicationRecord
     has_many :items, dependent: :destroy
     has_secure_password
 
-    #validations:
     validates :name, :username, :email, :city, :bio, presence: true
     validates :name, length: { in: 2..100 }
     validates :password, length: { in: 5..20 }
@@ -20,11 +19,8 @@ class User < ApplicationRecord
     end
 
     def available_for_trade
-
         trades_not_approved = self.with_trades.select{ |item| item.trades.all? {|t| t.status != "Approved" } }
-        
         without_trades = self.no_trades
-
         available = [trades_not_approved, without_trades].flatten
     end
 
