@@ -21,6 +21,3 @@ Postegres SQL
 * How to run the test suite
 Run the migrations
 
-* Deployment instructions
-
-* ...
