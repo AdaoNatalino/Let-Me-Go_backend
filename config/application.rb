@@ -1,5 +1,7 @@
 require_relative 'boot'
 
+#rails requires
+
 require "rails"
 # Pick the frameworks you want:
 require "active_model/railtie"
