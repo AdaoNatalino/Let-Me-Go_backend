@@ -20,5 +20,7 @@ Rails.application.routes.draw do
   get '/categories/:category_name', to: 'items#category'
 
   post '/login', to: 'auth#login'
+
+  
   get '/validate', to: 'auth#validate'
 end

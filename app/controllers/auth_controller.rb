@@ -14,12 +14,11 @@ class AuthController < ApplicationController
   end
   
   def validate
-    @token = token_with_user_id_and_time(@user)
+    @token = token_with_user_id_and_time(current_user)
     render json: { user: UserSerializer.new(current_user), jwt: @token }
   end
 
   private
-  
   def user_login_params
     params.require(:user).permit(:username, :password)
   end
