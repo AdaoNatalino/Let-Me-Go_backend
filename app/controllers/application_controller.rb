@@ -47,4 +47,5 @@ class ApplicationController < ActionController::API
   def authorized
     render json: { message: 'Not logged in or Token expired, Please log in!' }, status: :unauthorized unless logged_in?
   end
+  
 end

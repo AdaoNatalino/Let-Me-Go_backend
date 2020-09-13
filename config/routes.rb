@@ -23,4 +23,6 @@ Rails.application.routes.draw do
 
   
   get '/validate', to: 'auth#validate'
+
+  
 end
