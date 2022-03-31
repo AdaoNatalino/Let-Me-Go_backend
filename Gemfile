@@ -8,7 +8,7 @@ gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'mast
 
 gem 'rails', '~> 6.0.3', '>= 6.0.3.2'
 gem 'pg', '>= 0.18', '< 2.0'
-gem 'puma', '~> 4.1'
+gem 'puma', '~> 4.3'
 # gem 'jbuilder', '~> 2.7'
 # gem 'redis', '~> 4.0'
 gem 'bcrypt', '~> 3.1.7'
